@@ -1,6 +1,6 @@
 function toggleMenu() {
     const navLinks = document.querySelector("nav ul");
-    navLinks.classList.toggle("activate");
+    navLinks.classList.toggle("show");
 }
 
 function addToCart(itemName, itemPrice) {
@@ -14,6 +14,14 @@ function addToCart(itemName, itemPrice) {
 
     updateCartDisplay();
 }
+function removeItem(index) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    if (index >= 0 && index < cartItems.length) {
+        cartItems.splice(index, 1);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateOrderPage();
+    }
+}
 
 function updateOrderPage() {
 
@@ -23,10 +31,13 @@ function updateOrderPage() {
 
     orderItemsContainer.innerHTML = '';
 
-    cartItems.forEach(item => {
+    cartItems.forEach((item, index) => {
         const orderItem = document.createElement('div');
         orderItem.className = 'order-item';
-        orderItem.innerHTML = `<p>${item.name} - $${item.price.toFixed(2)}</p>`;
+        orderItem.innerHTML = `
+            <p>${item.name} - $${item.price.toFixed(2)}</p>
+            <button onclick="removeItem(${index})" class="remove-btn">REMOVE</button>
+        `;
         orderItemsContainer.appendChild(orderItem);
     });
 
@@ -39,25 +50,26 @@ if (document.getElementById('order-items')) {
     updateOrderPage();
 }
 
-const UNSPLASH_API_KEY = '4JfaeeTaLhn7IGsk8WNOabC3qW-3r543qOnYer8IJAQ';
-const UNSPLASH_API_URL = `https://api.unsplash.com/photos?client_id=${UNSPLASH_API_KEY}&per_page=5`;
+const gallery = document.getElementById('Imagegallery');
+const ACCESS_KEY = '4JfaeeTaLhn7IGsk8WNOabC3qW-3r543qOnYer8IJAQ';
 
-async function fetchImages() {
-    try {
-        const response = await fetch(UNSPLASH_API_URL);
-        const images = await response.json();
-        const imageGallery = document.getElementById('Imagegallery');
-
-        images.forEach(img => {
-            const imageElement = document.createElement('img');
-            imageElement.src = img.urls.regular;
-            imageElement.alt = img.alt_description || 'Gallery Image';
-            imageElement.classList.add('gallery-image');
-            imageGallery.appendChild(imageElement);
-        });
-    } catch (error) {
-        console.error('Error fetching images:', error);
-    }
+async function fetchCoffeeImages() {
+  try {
+    const response = await fetch(
+      `https://api.unsplash.com/search/photos?query=coffee-shop&per_page=6&client_id=${ACCESS_KEY}`
+    );
+    const data = await response.json();
+    
+    data.results.forEach(photo => {
+      const img = document.createElement('img');
+      img.src = photo.urls.regular;
+      img.alt = photo.alt_description;
+      img.loading = "lazy";
+      gallery.appendChild(img);
+    });
+  } catch (error) {
+    console.error('Error fetching images:', error);
+  }
 }
 
-fetchImages();
+fetchCoffeeImages();
