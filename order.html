@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Coffeetopia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mob-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+
+    <main>
+        <h2 >Your Order</h2>
+        <div id="order-items" class="order-items">
+            <!-- Order items will be automatically placed here here -->
+        </div>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+
+        <section class="order-information">
+            <h2>Your Information</h2>
+            <form id="order-form">
+                <label for="customer-name">Name:</label>
+                <input type="text"  placeholder="Enter Your Name" required>
+
+                <label for="customer-email">Email:</label>
+                <input type="email" placeholder="Enter Your Email" required>
+
+                <button type="submit" class="button">Place Order</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 Coffee Haven. All rights reserved.</p>
+        <p>"Awaken Your Senses"</p>
+        <p>123 Brew Lane, Bean Town</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

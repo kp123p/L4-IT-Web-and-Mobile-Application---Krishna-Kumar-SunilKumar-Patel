@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Coffeetopia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mob-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+
+    <main>
+        <section class="title-header">
+            <h2 class="section-title">Coffeetopia</h2>
+            <p>Freshly Baked, Perfectly Brewed.</p>
+        </section>
+        <section>
+            <h3>Explore Our Beverage World</h3>
+            <p>Delight in our flavorful coffees</p>
+            <button class="button" onclick="window.location.href = 'menu.html'">View Our Menu</button>
+        </section>
+        <section>
+            <h2>Special Offers!</h2>
+            <p>Discover our seasonal specials and limited-time delights!</p>
+            <div class="menu-grid">
+                <div id="menu-item">
+                    <img src="images/latte.jpg" alt="Espresso" class="responsive-img">
+                    <h3>Vanilla Latte</h3>
+                    <p>Smooth espresso blended with steamed milk and a hint of vanilla, topped with foam.</p>
+                    <span class="price">$4.50</span>
+                </div>
+
+                <div id="menu-item">
+                    <img src="images/Churropuffs.jpg" alt="Espresso" class="responsive-img">
+                    <h3>Stuffed Churro Puffs</h3>
+                    <p>Light, crispy puffs coated in cinnamon sugar and filled with luscious cream, delivering a delightful mix of crunch and sweetness.</p>
+                    <span class="price">$2.50</span>
+                </div>
+
+                <div id="menu-item">
+                    <img src="images/Expresso.jpg" alt="Espresso" class="responsive-img">
+                    <h3>Espresso Shot</h3>
+                    <p>Rich and bold espresso brewed to perfection, ideal for a quick caffeine boost.</p>
+                    <span class="price">$3.00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+    <footer>
+        <p>&copy; 2023 Coffee Haven. All rights reserved.</p>
+        <p>"Awaken Your Senses"</p>
+        <p>123 Brew Lane, Bean Town</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

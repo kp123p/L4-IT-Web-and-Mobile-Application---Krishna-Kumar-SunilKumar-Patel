@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Coffeetopia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mob-menu" onclick="toggleMenu()">
+                ☰
+            </div>
+    </header>
+
+    <main>
+        <h2 class="section-title">Our Menu</h2>
+        
+        <section class="menu-grid" >
+            <div class="menu-item">
+                <img src="images/Expresso.jpg" alt="Espresso" class="responsive-img">
+                <h3>Espresso Shot</h3>
+                <p>Rich and bold espresso brewed to perfection, ideal for a quick caffeine boost.</p>
+                <div class="price">$3.00</div>
+                <button class="button" onclick="addToCart('Espresso', 3.00)">Add to Order</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/Blueberrypastries.jpg" alt="Espresso" class="responsive-img">
+                <h3>Blueberry-Cream Cheese Pastries</h3>
+                <p>Flaky, golden pastries filled with sweet blueberry compote and creamy cheese, offering a perfect balance of tangy and rich flavors.</p>
+                <div class="price">$4.50</div>
+                <button class="button" onclick="addToCart('Espresso', 4.50)">Add to Order</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/latte.jpg" alt="Espresso" class="responsive-img">
+                <h3>Vanilla Latte</h3>
+                <p>Smooth espresso blended with steamed milk and a hint of vanilla, topped with foam.</p>
+                <div class="price">$5.00</div>
+                <button class="button" onclick="addToCart('Espresso', 5.00)">Add to Order</button>
+            </div>
+           
+            <div class="menu-item">
+                <img src="images/Churropuffs.jpg" alt="Espresso" class="responsive-img">
+                <h3>Stuffed Churro Puffs</h3>
+                <p>Light, crispy puffs coated in cinnamon sugar and filled with luscious cream, delivering a delightful mix of crunch and sweetness.</p>
+                <div class="price">$2.50</div>
+                <button class="button" onclick="addToCart('Espresso', 2.50)">Add to Order</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/Cortado.jpg" alt="Espresso" class="responsive-img">
+                <h3>Cortado Coffee</h3>
+                <p>Smooth espresso with a touch of steamed milk for a rich, balanced flavor.</p>
+                <div class="price">$4.00</div>
+                <button class="button" onclick="addToCart('Espresso', 4.00)">Add to Order</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/ladylocks.jpg" alt="Espresso" class="responsive-img">
+                <h3>Lady Locks</h3>
+                <p>Delicate, flaky pastry shells filled with smooth, sweet cream, making them a classic, elegant treat for any occasion.</p>
+                <div class="price">$1.50</div>
+                <button class="button" onclick="addToCart('Espresso', 1.50)">Add to Order</button>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Coffee Haven. All rights reserved.</p>
+        <p>"Awaken Your Senses"</p>
+        <p>123 Brew Lane, Bean Town</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

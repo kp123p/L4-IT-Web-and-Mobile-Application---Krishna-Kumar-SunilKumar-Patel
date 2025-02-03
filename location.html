@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Coffeetopia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mob-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+
+    <main>
+        <h2 class="section-title">Find Us</h2>
+        
+        <div class="map-container">
+            <iframe
+              class="map-frame"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=35.263%2C35.267%2C35.279%2C35.271&amp;layer=mapnik&amp;marker=35.269%2C35.271"
+              style="border: 1px solid black">
+            </iframe>
+        </div>
+
+        <section id="opening-hours">
+            <h2>Opening Hours</h2>
+            <ul>
+                <li><strong>Monday - Friday:</strong> 7:00 AM - 9:00 PM</li>
+                <li><strong>Saturday:</strong> 8:00 AM - 10:00 PM</li>
+                <li><strong>Sunday:</strong> 8:00 AM - 8:00 PM</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Coffee Haven. All rights reserved.</p>
+        <p>"Awaken Your Senses"</p>
+        <p>123 Brew Lane, Bean Town</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

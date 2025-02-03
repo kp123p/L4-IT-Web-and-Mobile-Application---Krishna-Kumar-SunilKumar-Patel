@@ -1,0 +1,281 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #f4f1ea;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1{
+    margin: 0;
+    color: #333;
+    padding-left: 20px;
+}
+
+nav ul {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: #6f4e37;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4d3625;
+}
+
+.mob-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.button {
+    background: #6f4e37;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 1px;
+
+}
+
+.button:hover {
+    background: #4d3625;
+}
+
+main{
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: #298021;
+    margin-bottom: 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ 
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.menu-item, .order-items {
+    text-align: center;
+    background: #fff8f0;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto; 
+    max-height: 250px; 
+    object-fit: cover;
+    border-radius: 8px;
+    display: block; 
+    aspect-ratio: 1/1; 
+}
+
+.price {
+    display: block;
+    font-size: 1.4rem;
+    color: #6f4e37;
+    margin: 1rem 0;
+    font-weight: bold; 
+} 
+
+.order-information, #opening-hours  {
+    background: #fff8f0;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 1px solid#ccc;
+} 
+
+#opening-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-information form, #contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff8f0;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form .button, .view-menu-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+form .button:hover, .view-menu-button:hover {
+    background-color: #555;
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.about-section img {
+    width: 45%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.about-section div {
+    width: 45%;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.map-container {
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.map-frame {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+#opening-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    margin-bottom: 1px solid #e0d7cf;
+}
+
+footer {
+    background: #6f4e37;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .mob-menu {
+        display: block;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-section img, .about-section div {
+        width: 100%;
+    }
+} 
+
+
+
+
+
