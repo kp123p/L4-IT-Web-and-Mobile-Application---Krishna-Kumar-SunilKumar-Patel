@@ -14,6 +14,7 @@ function addToCart(itemName, itemPrice) {
 
     updateCartDisplay();
 }
+
 function removeItem(index) {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     if (index >= 0 && index < cartItems.length) {

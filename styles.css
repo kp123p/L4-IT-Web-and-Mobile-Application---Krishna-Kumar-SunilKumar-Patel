@@ -128,7 +128,7 @@ main{
 
 .price {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #6f4e37;
     margin: 1rem 0;
     font-weight: bold; 
@@ -142,12 +142,6 @@ main{
     margin: 2rem auto;
     border: 1px solid#ccc;
 } 
-
-#opening-hours ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
 .order-information form, #contact-form {
     display: flex;
@@ -213,6 +207,12 @@ form input, form textarea {
     justify-content: space-between;
     padding: 0.8rem 0;
     margin-bottom: 1px solid #e0d7cf;
+}
+
+#opening-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 footer {
