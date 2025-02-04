@@ -7,7 +7,7 @@
 }
 
 header {
-    background: #f4f1ea;
+    background: #6f4e37;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@ header {
 
 header h1{
     margin: 0;
-    color: #333;
+    color: #efe5e5;
     padding-left: 20px;
 }
 
@@ -35,13 +35,13 @@ nav ul {
 nav a {
     padding: 10px;
     text-decoration: none;
-    color: #6f4e37;
+    color: #efe5e5;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #4d3625;
+    color: #6f4e37;
 }
 
 .mob-menu {
@@ -51,9 +51,9 @@ nav a:hover {
     padding-right: 20px;
 }
 
-.button {
-    background: #6f4e37;
-    color: white;
+.button, .remove-btn, form .button, .view-menu-button  {
+    background-color: #6f4e37;
+    color: rgb(234, 231, 231);
     padding: 0.8rem 2rem;
     border: none;
     border-radius: 25px;
@@ -64,7 +64,7 @@ nav a:hover {
 
 }
 
-.button:hover {
+.button:hover, form .button:hover, .view-menu-button:hover {
     background: #4d3625;
 }
 
@@ -74,7 +74,7 @@ main{
 }
 
 .section-title {
-    color: #298021;
+    color: #6f4e37;
     margin-bottom: 20px;
 }
 
@@ -160,20 +160,6 @@ main{
     margin: 0 auto;
 }
 
-.remove-btn {
-    background-color: #fff8f0;
-    color: rgb(16, 4, 4);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.remove-btn:hover {
-    background-color: #2a2222;
-}
-
 form label {
     display: block;
     margin-bottom: 5px;
@@ -185,19 +171,6 @@ form input, form textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
-}
-
-form .button, .view-menu-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-form .button:hover, .view-menu-button:hover {
-    background-color: #555;
 }
 
 .about-section {
@@ -244,7 +217,7 @@ form .button:hover, .view-menu-button:hover {
 
 footer {
     background: #6f4e37;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 1rem;
