@@ -12,7 +12,7 @@ function addToCart(itemName, itemPrice) {
 
     alert(`${itemName} has been added to your order.`);
 
-    updateCartDisplay();
+    updateOrderPage();
 }
 
 function removeItem(index) {
@@ -74,3 +74,4 @@ async function fetchCoffeeImages() {
 }
 
 fetchCoffeeImages();
+
