@@ -17,7 +17,7 @@ function addToCart(itemName, itemPrice) {
 
 function removeItem(index) {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    if (index >= 0 && index < cartItems.length) {
+    if (index in cartItems) {
         cartItems.splice(index, 1);
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         updateOrderPage();
@@ -65,7 +65,6 @@ async function fetchCoffeeImages() {
       const img = document.createElement('img');
       img.src = photo.urls.regular;
       img.alt = photo.alt_description;
-      img.loading = "lazy";
       gallery.appendChild(img);
     });
   } catch (error) {
